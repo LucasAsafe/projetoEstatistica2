@@ -1,0 +1,37 @@
+# Flavio Braga e Silva Junior (Fbsj)
+# Lucas Asafe Virginio do Nascimento (Lavn)
+
+planilha <- read.csv(file = 'Detalhes.csv', header = TRUE)
+
+#Funcao para obter modas(questoes 2 e 3)
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+
+#Funcao para retornar os artistas que lancaram album nos dois anos
+getArtist <- function(){
+  for (note in range(length(planilha$Ano))){
+    
+  } 
+}
+
+
+getQuintaQuest <- function(ano){
+  for (note in range(length(planilha$Ano))){
+    if (planilha$Ano(note) = 9){
+      print(planilha$Episodio[note])
+    }
+  } 
+}
+
+
+#Questão 1 - printar o dataframe exatamente como ele esta
+print(planilha, quote = TRUE, row.names(FALSE))
+
+#Questão 2 - Encontre a média, o desvio padrão e a moda das vendas do total de álbuns 
+cat(paste("\nA media das vendas do total de álbuns eh : ", mean(planilha$Qnt..de.Albuns.Vendidos), "\nO desvio padrao das vendas do total de álbuns eh: ", sd(planilha$Qnt..de.Albuns.Vendidos), "\nA moda eh: ", getmode(planilha$Qnt..de.Albuns.Vendidos)))
+
+#Questão 3 - Faça uma função que retorna os nomes dos artistas que lançaram álbuns nos dois anos
+getArtist()
